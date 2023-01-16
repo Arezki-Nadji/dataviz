@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Big Data</title>
+</head>
+
+<body>
+    <div style="margin-left: 150px;">
+    <pre> 
+        SELECT ?football ?footballLabel WHERE {
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+            ?football wdt:P641 wd:Q2736.
+          }
+          LIMIT 2000
+    </pre>
+
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20%3Ffootball%20%3FfootballLabel%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Ffootball%20wdt%3AP641%20wd%3AQ2736.%0A%7D%0ALIMIT%202000" 
+    referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+</div>
+</body>
