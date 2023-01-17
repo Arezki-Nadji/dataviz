@@ -5,10 +5,12 @@
 
 <body>
     <div style="margin-left: 150px;">
+        <a href="exo2.html">Exo2</a>
     <pre> 
-        SELECT DISTINCT ?football ?prénom ?prénomLabel ?nom_de_famille ?nom_de_familleLabel ?membre_de_l_équipe_de_sport ?membre_de_l_équipe_de_sportLabel 
-        ?entraîneur_ou_directeur_sportif ?entraîneur_ou_directeur_sportifLabel ?ligue ?ligueLabel ?pseudonyme ?langues_parlées__écrites_ou_signées 
-        ?langues_parlées__écrites_ou_signéesLabel ?frère_ou_sœur ?frère_ou_sœurLabel ?nombre_de_matchs_joués ?enfant ?enfantLabel ?hauteur ?image WHERE {
+        SELECT DISTINCT ?football ?prénom ?prénomLabel ?nom_de_famille ?nom_de_familleLabel ?membre_de_l_équipe_de_sport
+         ?membre_de_l_équipe_de_sportLabel ?entraîneur_ou_directeur_sportif ?entraîneur_ou_directeur_sportifLabel ?ligue ?ligueLabel 
+         ?pseudonyme ?langues_parlées__écrites_ou_signées ?langues_parlées__écrites_ou_signéesLabel ?frère_ou_sœur ?frère_ou_sœurLabel
+          ?nombre_de_matchs_joués ?enfant ?enfantLabel ?hauteur ?image ?pays_de_citoyenneté ?pays_de_citoyennetéLabel WHERE {
             SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
             ?football wdt:P641 wd:Q2736.
             OPTIONAL { ?football wdt:P735 ?prénom. }
@@ -22,13 +24,14 @@
             OPTIONAL { ?football wdt:P118 ?ligue. }
             OPTIONAL { ?football wdt:P1412 ?langues_parlées__écrites_ou_signées. }
             OPTIONAL { ?football wdt:P1350 ?nombre_de_matchs_joués. }
-            ?football wdt:P166 wd:Q166177.
+            
             OPTIONAL { ?football wdt:P18 ?image. }
+            OPTIONAL { ?football wdt:P27 ?pays_de_citoyenneté. }
           }
           LIMIT 100
     </pre>
 
-    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20DISTINCT%20%3Ffootball%20%3Fpr%C3%A9nom%20%3Fpr%C3%A9nomLabel%20%3Fnom_de_famille%20%3Fnom_de_familleLabel%20%3Fmembre_de_l_%C3%A9quipe_de_sport%20%3Fmembre_de_l_%C3%A9quipe_de_sportLabel%20%3Fentra%C3%AEneur_ou_directeur_sportif%20%3Fentra%C3%AEneur_ou_directeur_sportifLabel%20%3Fligue%20%3FligueLabel%20%3Fpseudonyme%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9es%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9esLabel%20%3Ffr%C3%A8re_ou_s%C5%93ur%20%3Ffr%C3%A8re_ou_s%C5%93urLabel%20%3Fnombre_de_matchs_jou%C3%A9s%20%3Fenfant%20%3FenfantLabel%20%3Fhauteur%20%3Fimage%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Ffootball%20wdt%3AP641%20wd%3AQ2736.%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP735%20%3Fpr%C3%A9nom.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP734%20%3Fnom_de_famille.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP742%20%3Fpseudonyme.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP2048%20%3Fhauteur.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP40%20%3Fenfant.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP3373%20%3Ffr%C3%A8re_ou_s%C5%93ur.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP54%20%3Fmembre_de_l_%C3%A9quipe_de_sport.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP286%20%3Fentra%C3%AEneur_ou_directeur_sportif.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP118%20%3Fligue.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP1412%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9es.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP1350%20%3Fnombre_de_matchs_jou%C3%A9s.%20%7D%0A%20%20%3Ffootball%20wdt%3AP166%20wd%3AQ166177.%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP18%20%3Fimage.%20%7D%0A%7D%0ALIMIT%20100" 
-    referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+    <iframe style="width: 80vw; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#SELECT%20DISTINCT%20%3Ffootball%20%3Fpr%C3%A9nom%20%3Fpr%C3%A9nomLabel%20%3Fnom_de_famille%20%3Fnom_de_familleLabel%20%3Fmembre_de_l_%C3%A9quipe_de_sport%20%3Fmembre_de_l_%C3%A9quipe_de_sportLabel%20%3Fentra%C3%AEneur_ou_directeur_sportif%20%3Fentra%C3%AEneur_ou_directeur_sportifLabel%20%3Fligue%20%3FligueLabel%20%3Fpseudonyme%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9es%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9esLabel%20%3Ffr%C3%A8re_ou_s%C5%93ur%20%3Ffr%C3%A8re_ou_s%C5%93urLabel%20%3Fnombre_de_matchs_jou%C3%A9s%20%3Fenfant%20%3FenfantLabel%20%3Fhauteur%20%3Fimage%20%3Fpays_de_citoyennet%C3%A9%20%3Fpays_de_citoyennet%C3%A9Label%20WHERE%20%7B%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%20%20%3Ffootball%20wdt%3AP641%20wd%3AQ2736.%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP735%20%3Fpr%C3%A9nom.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP734%20%3Fnom_de_famille.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP742%20%3Fpseudonyme.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP2048%20%3Fhauteur.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP40%20%3Fenfant.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP3373%20%3Ffr%C3%A8re_ou_s%C5%93ur.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP54%20%3Fmembre_de_l_%C3%A9quipe_de_sport.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP286%20%3Fentra%C3%AEneur_ou_directeur_sportif.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP118%20%3Fligue.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP1412%20%3Flangues_parl%C3%A9es__%C3%A9crites_ou_sign%C3%A9es.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP1350%20%3Fnombre_de_matchs_jou%C3%A9s.%20%7D%0A%20%20%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP18%20%3Fimage.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Ffootball%20wdt%3AP27%20%3Fpays_de_citoyennet%C3%A9.%20%7D%0A%7D%0ALIMIT%20100"
+     referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
 </div>
 </body>
